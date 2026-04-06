@@ -25,7 +25,7 @@ A backend system for managing financial records with role-based access control a
 ## Setup
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/thevishwass/finance-backend
 cd finance-dashboard-backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
