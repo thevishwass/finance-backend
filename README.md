@@ -1,33 +1,42 @@
 # Finance Dashboard Backend
 
-A backend system for managing financial records with role-based access control and dashboard analytics.
+> A robust backend system for managing financial records with role-based access control and dashboard analytics.
 
 ---
 
 ## Tech Stack
 
-- FastAPI
-- SQLAlchemy ORM
-- SQLite
+| Technology | Purpose |
+|---|---|
+| **FastAPI** | High-performance async web framework |
+| **SQLAlchemy ORM** | Database abstraction & query building |
+| **SQLite** | Lightweight relational database |
 
 ---
 
 ## Features
 
-- User management with roles — viewer, analyst, admin
-- Financial record CRUD operations
-- Dashboard summary analytics
-- Role-based access control via FastAPI dependencies
-- Filtering by type, category, and date range with pagination
+- **User Management** — Create and manage users with scoped roles
+- **Financial Record CRUD** — Full create, read, update, and delete operations
+- **Dashboard Analytics** — Summary insights across financial data
+- **Role-Based Access Control** — Enforced via FastAPI dependency injection
+- **Advanced Filtering** — Filter by type, category, and date range with pagination
 
 ---
 
-## Setup
+## Getting Started
 
 ```bash
-git clone https://github.com/thevishwass/finance-backend
+# Clone the repository
+git clone https://github.com/thevishwas/finance-backend
+
+# Navigate to the project directory
 cd finance-dashboard-backend
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Start the development server
 uvicorn app.main:app --reload
 ```
 
@@ -35,7 +44,7 @@ uvicorn app.main:app --reload
 
 ## API Documentation
 
-FastAPI generates interactive API docs automatically.
+FastAPI auto-generates interactive API docs. Once the server is running, visit:
 
 ```
 http://localhost:8000/docs
@@ -45,13 +54,32 @@ http://localhost:8000/docs
 
 ## Role Permissions
 
-| Role    | Permissions                                                |
-|---------|------------------------------------------------------------|
-| viewer  | View dashboard analytics                                   |
-| analyst | View financial records, access dashboard analytics         |
-| admin   | Manage users, create, update, and delete financial records |
+| Role | Permissions |
+|---|---|
+| `viewer` | View dashboard analytics |
+| `analyst` | View financial records · Access dashboard analytics |
+| `admin` | Manage users · Create, update & delete financial records |
 
+---
 
-# Made by Vishwas :)
+## Project Structure
 
+```
+finance-dashboard-backend/
+├── app/
+│   ├── main.py          # Application entry point
+│   ├── models/          # SQLAlchemy models
+│   ├── routes/          # API route handlers
+│   ├── dependencies/    # RBAC & auth dependencies
+│   └── schemas/         # Pydantic request/response schemas
+├── requirements.txt
+└── README.md
+```
 
+---
+
+<div align="center">
+
+Made by **Vishwas**
+
+</div>
